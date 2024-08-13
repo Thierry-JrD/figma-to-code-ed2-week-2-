@@ -1,0 +1,41 @@
+/* This stylesheet refer to Cursor design */
+
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background: rgb(0, 0, 0);
+}
+
+/*.cursor-outline {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgb(78, 76, 76);
+}
+
+.cursor-dot, 
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}*/
+
+.circle {
+    /*width: 30px;
+    height: 30px;*/
+    border: 2px solid black;
+}
+
+.cursor-dot, 
+.circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 200;
+    pointer-events: none;
+}

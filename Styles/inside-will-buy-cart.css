@@ -1,0 +1,351 @@
+/* Inside Will Buy Cart */
+
+@import url('style.css');
+
+:root {
+    --normal-bg-color: white; 
+    --normal-fg-color: gray;
+    --b-white: #FFF;
+    --b-light-gray: #E5E5E5;
+    --b-gray: #C3C3C3;
+    --b-dark-gray: #7E7E7E;
+    --b-black: #1D1D1D; 
+    --b-green: #2D5C43;
+    --b-purple: #393158;
+    --b-ocean: #2A5259;
+    --b-olive: #706947;
+}
+
+#inside-will-buy-cart {
+    margin-top: 76px;
+    width: 100%;
+    display: none; /* flex */
+    flex-direction: column;
+    gap: 72px;
+    overflow: hidden;
+    /*border: 1px solid;*/
+    font-family: 'Archivo';
+}
+
+
+#inside-will-buy-cart h2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+}
+
+#info-descrip {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#info-descrip .cart-img, 
+#info-descrip .messages {
+    width: 579px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#info-descrip .messages {
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+#info-descrip .cart-img {
+    overflow: hidden;
+    border-radius: 20px;
+    /*border: 1px solid red;*/
+}
+
+#info-descrip .cart-img img {
+    width: 105%;
+}
+
+#cart-info {
+    
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*gap: 20px;*/
+}
+
+.chillax {
+    font-family: 'Chillax';
+    font-size: 42px;
+    line-height: 46px;
+}
+
+.archivo {
+    font-family: 'Archivo';
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.colors, .size {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cart-info .colors h2, #cart-info .size h2 {
+    font-size: 30px;
+    line-height: 36px;
+}
+
+/*.colors p, .size p {
+    font-size: 30px;
+    font-weight: 36px;
+    font-weight: bold;
+}*/
+
+.colors-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.colors-box button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    border: none;
+    transition: 0.5s ease;
+}
+
+.colors-box button:hover {
+    opacity: 30%;
+}
+
+.color.green {
+    border: 2px solid var(--b-light-gray);
+    background-color: var(-b-green);
+    background-color: var(--b-green);
+}
+
+.color.violet {
+    background-color: var(--b-purple);
+}
+
+.color.darkerBlue {
+    background-color: var(--b-ocean);
+}
+
+.color.darkerMaganta {
+    background-color: var(--b-olive);
+}
+
+.size-box {
+    display: flex;
+    gap: 10px;
+}
+
+.size-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 52px;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 10px 21.5px;
+    background-color: var(--b-white);
+    border: 1.5px solid var(--b-black);
+    border-radius: 50px;
+    transition: 0.5s ease;
+}
+
+.size-box button:hover, .size-box button:nth-child(1) {
+    background-color: var(--b-black);
+    color: var(--b-white);
+}
+
+.buy-article {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 579px;
+}
+
+.buy-article button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 282.5px;
+    height: 68px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 1px solid var(--b-black);
+    background-color: var(--b-white);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.buy-article button:nth-child(1), .buy-article button:hover {
+    background-color: var(--b-black);
+    color: var(--b-white);
+}
+
+/*----------------------------------------*/
+
+#inside-will-buy-cart #info-descrip #cart-descrip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 162px;
+}
+
+#inside-will-buy-cart #cart-descrip h2 {
+    font-family: 'Chillax Regular';
+    font-weight: 900;
+}
+
+#inside-will-buy-cart #cart-descrip p {
+    color: var(--b-dark-gray);
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/*----------------------------------------*/
+
+#catalogue h2 {
+    font-size: 30px;
+    font-family: 'Chillax';
+    line-height: 36px;
+    margin-bottom: 32px;
+}
+
+/*-----------------------------------------------------*/
+
+@media (max-width: 768px) {
+
+    #inside-will-buy-cart {
+        width: 674px;
+    }
+
+    #info-descrip {
+        flex-direction: column;
+        width: 100%;
+        height: 1286px;
+    }
+
+    #info-descrip .cart-img {
+        width: 674px;
+        height: 674px;
+        border-radius: 1px solid;
+    }
+
+    #info-descrip .messages {
+        width: 100%;
+        height: 572px;
+    }
+
+    .buy-article {
+        width: 100%;
+    }
+
+    .buy-article button {
+        width: 330px;
+    }
+}
+
+/*-----------------------------------------------------*/
+
+@media (max-width: 375px) {
+
+    #inside-will-buy-cart {
+        margin-top: 56px;
+        width: 100%;
+    }
+
+    #info-descrip {
+        height: 888px;
+    }
+
+    #info-descrip .cart-img {
+        width: 100%;
+        height: 378px;
+        border-radius: 1px solid;
+    }
+
+    #info-descrip .messages {
+        height: 478px;
+    }
+
+    .chillax {
+        font-family: 'Chillax';
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    .archivo {
+        font-family: 'Archivo';
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .colors, .size {
+        gap: 10px; /* modified */
+    }
+
+    #cart-info .colors h2, #cart-info .size h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .colors-box button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .size-box button {
+        width: 55px;
+        height: 42px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .buy-article button {
+        width: 160.5px;
+        height: 44px;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    #info-descrip #cart-descrip {
+        height: 146px;
+    }
+    
+    #info-descrip #cart-descrip h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    #info-descrip #cart-descrip p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #catalogue h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    /*#card-grid .card-container .card-content h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }*/
+}
+ 
+
+
