@@ -1,1 +1,33 @@
---
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0.0'  # before, I used this version : '2.7.5' and I modified 'gem install bundler' by 'gem install bundler -v 2.4.22'
+
+    - name: Install dependencies
+      run: |
+        gem install bundler -v 2.4.22 
+        bundle install
+
+    - name: Build the site
+      run: bundle exec jekyll build --destination ./docs
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
